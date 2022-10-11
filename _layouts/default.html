@@ -47,7 +47,11 @@ repository.name == "comma10kviewer" or
       repository.name == "comma10kreviewer" or
       repository.name == "RAWGPlaynitePlugin" %}
       <p>
-      <a href="{{ repository.html_url }}">{{ repository.name }}</a> ({{ repository.homepage }})
+      <a href="{{ repository.html_url }}">{{ repository.name }}</a> 
+        {% if 
+      repository.homepage != "" %}
+        (<a href="{{ repository.homepage }}">Website</a>)
+        {% endif %}
       </p>
       {% endif %}
 {% endfor %}
