@@ -31,7 +31,7 @@
       {{ content }}
       {% for repository in site.github.public_repositories %}
       <p>
-      <a href="{{ repository.html_url }}" class="btn">{{ repository.name }}</a>
+      <a href="{{ repository.html_url }}">{{ repository.name }}</a>
       </p>
 {% endfor %}
       <footer class="site-footer">
