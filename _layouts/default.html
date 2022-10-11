@@ -22,6 +22,7 @@
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
       {% if site.show_downloads %}
+        
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
@@ -30,9 +31,24 @@
     <main id="content" class="main-content" role="main">
       {{ content }}
       {% for repository in site.github.public_repositories %}
+      {% if 
+      repository.name == "comma10kreviewer" or
+repository.name == "comma10kviewer" or
+      repository.name == "EmuMoviesPlaynitePlugin" or
+      repository.name == "ghostpilot" or
+      repository.name == "img-labeler" or
+      repository.name == "KaraokePlayer" or
+      repository.name == "LBGDBPlaynitePlugin" or
+      repository.name == "OpenpilotToolkit" or
+      repository.name == "PegasusExportPlugin" or
+      repository.name == "comma10kreviewer" or
+      repository.name == "comma10kreviewer" or
+      repository.name == "comma10kreviewer" or
+      repository.name == "RAWGPlaynitePlugin" %}
       <p>
       <a href="{{ repository.html_url }}">{{ repository.name }}</a>
       </p>
+      {% endif %}
 {% endfor %}
       <footer class="site-footer">
         {% if site.github.is_project_page %}
