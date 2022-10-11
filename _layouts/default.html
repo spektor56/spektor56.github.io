@@ -49,7 +49,7 @@ repository.name == "comma10kviewer" or
       <p>
       <a href="{{ repository.html_url }}">{{ repository.name }}</a> 
         {% if 
-      repository.homepage != "" %}
+      repository.homepage and repository.homepage != "" %}
         (<a href="{{ repository.homepage }}">Website</a>)
         {% endif %}
       </p>
